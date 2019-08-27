@@ -35,3 +35,22 @@ gimenez.pagarA(galvan)//paga 20000
 gimenez.dinero()
 assert.equals(278440, gimenez.dinero())
 }
+
+test "galvan" {
+galvan.gastar(4000)
+galvan.totalDeuda()
+galvan.totalDinero()
+galvan.gastar(8000)
+galvan.totalDeuda()
+galvan.totalDinero()
+galvan.cobrarSueldo()
+galvan.totalDeuda()
+galvan.totalDinero()
+galvan.gastar(2500)
+galvan.totalDeuda()
+galvan.totalDinero()
+galvan.cobrarSueldo()
+galvan.totalDeuda()
+galvan.totalDinero()
+assert.equals(15500, galvan.totalDinero())
+}
