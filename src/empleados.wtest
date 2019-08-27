@@ -1,12 +1,37 @@
 import empleados.*
 
 test "sueldo de Baigorria y de Galván" {
-	baigorria.venderEmpanada()
-	baigorria.venderEmpanada()
-	assert.equals(1530, baigorria.sueldo())
-	baigorria.venderEmpanada()
-	assert.equals(1545, baigorria.sueldo())
-	assert.equals(15000, galvan.sueldo())
-	galvan.sueldo(12000)
-	assert.equals(12000, galvan.sueldo())
+baigorria.venderEmpanada()//acciones
+baigorria.venderEmpanada()
+assert.equals(1530, baigorria.sueldo())//verificar una igualdad (resultado, lo que yo quiero que de ese resulado)
+baigorria.venderEmpanada()
+assert.equals(1545, baigorria.sueldo())
+assert.equals(15000, galvan.sueldo())
+galvan.sueldo(12000)
+assert.equals(12000, galvan.sueldo())
+}
+
+//comprueba si el programa hace lo que yo quiero
+//necesito importar empleados para que el programa funcione
+
+test "se rompe" {
+assert.equals(1000, galvan.sueldo())//aparece en amarillo
+
+}
+
+//baigoria vende 4 empanadas
+//poner el sueldo de galvan en 20000
+//que gimenez les pague a los dos
+//verificar con cuanto dinero queda gimenez
+
+test "gimenez" {
+baigorria.venderEmpanada()
+baigorria.venderEmpanada()
+baigorria.venderEmpanada()
+baigorria.venderEmpanada()
+galvan.sueldo(20000)
+gimenez.pagarA(baigorria)// paga 6000
+gimenez.pagarA(galvan)//paga 20000
+gimenez.dinero()
+assert.equals(278440, gimenez.dinero())
 }
