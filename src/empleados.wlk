@@ -11,24 +11,12 @@ method gastar(cuanto){
 resultado-=cuanto
 }
 method totalDeuda(){
-if (resultado<0){
-return resultado
-}
-else{
-return 0
-}
+return resultado.min(0)
 }
 method totalDinero(){
-if (resultado>0){
-return resultado
-}
-else{
-return 0
+return resultado.max(0)
 }
 }
-
-}
-
 object baigorria {
 var totalCobrado = 0
 var cantidadEmpanadasVendidas = 100
